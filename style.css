@@ -1,0 +1,16 @@
+h1{
+padding:100px;
+}
+.login-area{
+    padding-left: 100px;
+    padding-right:100px;
+    padding-bottom:30px;
+    padding-top:30px;
+    box-shadow: 10px 7px 27px -9px rgba(0,0,0,0.75);
+    width:80%;
+    margin:0 auto;
+
+}
+button{
+    padding:10px;
+}
