@@ -8,7 +8,7 @@
     <title>pioneer-bank</title>
 </head>
 <body>
-    <div class="button-area">
+    <div id="login-page">
         <h1 class="text-center">Welcome to pioneer Bank</h1>
         <div class="login-area">
             <h3>Log In</h3>
@@ -20,8 +20,80 @@
                   <label for="exampleInputPassword1">Password</label>
                   <input type="password" class="form-control" placeholder="Password" id="exampleInputPassword1">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" id="login">Submit</button>
         </div>
     </div>
+    <div id="transition-area" >
+      <div class="row">
+        <div class="col-md-4 ">
+          <div class="amountpadding Deposit">
+            <h5>Deposit</h5>
+            <h2>$ <span id="currentDeposite"></span></h2>
+          </div>
+        </div>
+        <div class="col-md-4 ">
+          <div class="amountpadding Withdraw">
+            <h5>Withdraw</h5>
+            <h2>$00</h2>
+          </div>
+        </div>
+        <div class="col-md-4 ">
+          <div class="amountpadding balance">
+            <h5>Balance</h5>
+            <h2>$1240</h2>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="main-form row d-flex justify-content-around">
+          <div class="secondery col-md-5">
+            <div class="form-group">
+              <h4>Deposite</h4>
+              <input type="text" id="depositecount" class="form-control" placeholder="$ Amount you want to depotite">
+            </div>
+            <button type="submit" class="btn btn-primary" id="deposite">Deposite</button>
+          </div>
+          <div class="secondery col-md-5">
+            <div class="form-group">
+              <h4>Withdraw</h4>
+              <input type="text" id="" class="form-control" placeholder="$ Amount you want to withdraw">
+            </div>
+            <button type="submit" class="btn btn-primary" id="withdraw">Withdraw</button>
+          </div>
+      </div>
+
+      
+    </div>
+    
+    <script>
+      //home page js
+        const loginBtn = document.getElementById('login');
+        loginBtn.addEventListener('click', function(){
+          const loginArea = document.getElementById('login-page');
+            loginArea.style.display = "none";
+          const transitionArea = document.getElementById("transition-area");
+          transitionArea.style.display = "block";
+        }) 
+      //End of home page
+
+
+      //Starting of doller calculation
+        const depositeBtn = document.getElementById('deposite');
+        depositeBtn.addEventListener('click', function () {
+          const depositeAmount = getElementById("depositecount").value;
+          const depositeNumber = parseFloat(depositeAmount);
+          
+          const currentDeposite = getElementById('currentDeposite').innerText;
+          const currentDepositeNumber = parseFloat(currentDeposite);
+          const  totalDeposite = depositeNumber + currentDepositeNumber;
+
+          document.getElementById('currentDeposite').innerText = totalDeposite;
+          document.getElementById('depositeAmount').value = "";
+
+        })
+      //Ending of doller calculation
+    </script> 
 </body>
 </html>

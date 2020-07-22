@@ -14,3 +14,34 @@ padding:100px;
 button{
     padding:10px;
 }
+#transition-area{
+    display:none;
+    margin-top:10%;
+}
+.Deposit{
+    background-color:slateblue;
+    margin:0 20px;
+
+}
+.Withdraw{
+    background-color:lightsalmon;
+    margin:0 20px;
+
+}
+.balance{
+    background-color:orange;
+    margin:0 20px;
+}
+.amountpadding{
+    padding:20px;
+    color:white;
+    border-radius:10px;
+}
+.main-form{
+    padding:50px 50px;
+}
+.secondery{
+    padding:50px 50px;
+    box-shadow: 10px 7px 27px -9px rgba(0,0,0,0.75);
+    border-radius: 10px;
+}
